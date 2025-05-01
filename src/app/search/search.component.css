@@ -1,0 +1,53 @@
+/* Wrapper div */
+div {
+    display: flex;
+    justify-content: center;  /* Centers the input and button horizontally */
+    margin-top: 3rem;  /* Increased space from the top */
+    margin-bottom: 2rem;  /* Slightly increased space from the bottom */
+}
+
+/* Styling for the input field */
+div input {
+    border-radius: 10rem 0 0 10rem;  /* Rounded left side */
+    border: none;
+    height: 3.5rem;  /* Slightly increased height for better visibility */
+    width: 22rem;  /* Increased width for more space */
+    background-color: #f9f9f9;  /* Lighter background color */
+    padding: 1rem 1.5rem;  /* Adjusted padding for better alignment */
+    font-size: 1.1rem;  /* Increased font size for readability */
+    font-weight: 500;
+    outline: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Subtle shadow for depth */
+    transition: box-shadow 0.3s ease;  /* Smooth transition for shadow on focus */
+}
+
+/* Input field focus effect */
+div input:focus {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);  /* Stronger shadow on focus */
+}
+
+/* Styling for the button */
+div button {
+    color: white;
+    height: 3.5rem;  /* Matching height with input */
+    width: 6rem;  /* Increased width for a more balanced look */
+    font-size: 1.1rem;  /* Slightly larger text for better readability */
+    font-weight: 600;  /* Stronger font weight for emphasis */
+    border-radius: 0 10rem 10rem 0;  /* Rounded right side */
+    border: none;
+    background-color: #e72929;  /* Red background */
+    opacity: 0.9;  /* Slight opacity for a softer look */
+    transition: opacity 0.3s ease, transform 0.3s ease;  /* Smooth transitions */
+}
+
+/* Hover effect for the button */
+div button:hover {
+    opacity: 1;  /* Full opacity on hover */
+    cursor: pointer;
+    transform: translateX(5px);  /* Slight movement to the right on hover */
+}
+
+/* Focus and active state for button */
+div button:active {
+    transform: translateX(2px);  /* Slightly smaller movement on click */
+}

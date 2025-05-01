@@ -1,0 +1,5 @@
+<span class="star"
+      *ngFor="let star of [].constructor(maxStars); let i = index">
+  <ng-container *ngIf="i < Math.floor(rating); else emptyStar">&#9733;</ng-container>
+  <ng-template #emptyStar>&#9734;</ng-template>
+</span>

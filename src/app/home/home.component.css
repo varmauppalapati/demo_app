@@ -1,0 +1,115 @@
+/* UL container with grid layout */
+ul {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columns, evenly distributed */
+    gap: 2rem 3rem; /* Space between items, 2rem for rows and 3rem for columns */
+    list-style-type: none;
+    padding: 2rem;
+    margin: 0;
+    background-color: #f4f4f4; /* Background color for the grid container */
+    box-sizing: border-box;
+}
+
+/* Each item within the grid */
+ul li a {
+    display: flex;
+    flex-direction: column; /* Stack image and content vertically */
+    border: 1px solid #ddd;
+    border-radius: 1rem;
+    overflow: hidden;
+    color: #333;
+    text-decoration: none;
+    background-color: #fff; /* White background for the items */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease; /* Smooth hover transition */
+}
+
+/* Image within each item */
+ul li a img {
+    width: 100%; /* Ensure the image stretches to fill the container */
+    height: 15rem; /* Fixed height for the image */
+    object-fit: cover; /* Maintain the aspect ratio without distortion */
+    border-bottom: 1px solid #ddd; /* Add a border under the image */
+}
+
+/* Hover effect for list items */
+ul li a:hover {
+    transform: translateY(-5px); /* Lift the item on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* Slightly stronger shadow on hover */
+    cursor: pointer;
+}
+
+/* Content section styling */
+.content {
+    padding: 1.5rem; /* Padding inside each item */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Ensure space between the elements */
+    position: relative;
+}
+
+/* Favorite icon styling */
+.favorite {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 1.6rem;
+    color: #e72929;
+    cursor: pointer;
+}
+
+/* Inactive favorite icon */
+.favorite .not {
+    color: black;
+}
+
+/* Name styling */
+.name {
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Cook time styling */
+.cook-time {
+    font-size: 0.9rem;
+    color: #888;
+    position: absolute;
+    bottom: 3.5rem;
+    right: 1rem;
+    flex: 3;
+    text-align: center;
+}
+
+/* Origins section styling */
+.origins {
+    flex: 9;
+    margin-bottom: 1rem;
+}
+
+/* Styling for origin tags */
+.origins span {
+    border-radius: 2rem;
+    background-color: #e1e1e1;
+    color: #777;
+    font-size: 0.9rem;
+    margin-right: 0.5rem;
+    display: inline-block;
+    padding: 0.4rem 1rem;
+}
+
+/* Price styling */
+.price {
+    font-size: 1.1rem;
+    color: #333;
+    margin-top: 0.5rem;
+    font-weight: bold;
+}
+
+/* Adjustments for mobile view */
+@media (max-width: 768px) {
+    ul {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on smaller screens */
+    }
+}

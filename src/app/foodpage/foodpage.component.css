@@ -1,0 +1,156 @@
+/* Centering the container in the page */
+.container {
+    display: flex;
+    align-items: center;  /* Center content vertically */
+    justify-content: center;  /* Center content horizontally */
+    gap: 2rem;  /* Moderate gap between image and details */
+    padding: 2rem;
+    background-color: #f4f4f4;  /* Subtle background color */
+    width: 100%;
+    height: 100vh;  /* Ensure it takes the full height of the viewport */
+    box-sizing: border-box;
+}
+
+/* Styling for the image */
+img {
+    border-radius: 1.5rem;
+    object-fit: cover;
+    width: 35rem;  /* Slightly smaller but still large */
+    height: 30rem;  /* Adjusted to maintain proportion */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);  /* Deep shadow for more emphasis */
+}
+
+/* Styling for the details */
+.details {
+    flex: 1;
+    max-width: 45rem;  /* Slightly smaller than before for a more compact look */
+    display: flex;
+    flex-direction: column;
+    padding: 2.5rem;  /* Slightly reduced padding for better spacing */
+    border-radius: 1.5rem;
+    background-color: #fff;
+    color: black;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);  /* Subtle shadow for separation */
+    transition: transform 0.3s ease-in-out;  /* Smooth hover effect */
+}
+
+.details:hover {
+    transform: translateY(-5px);  /* Hover effect for interactivity */
+}
+
+/* Styling for the header */
+.details .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;  /* Reduced margin to bring sections closer */
+}
+
+/* Other styling for text and tags */
+.details .name {
+    font-size: 2.5rem;  /* Slightly smaller font size */
+    font-weight: bold;
+    color: #333;  /* Darker color for contrast */
+}
+
+.details .favorite {
+    font-size: 2.8rem;  /* Slightly smaller icon */
+    color: grey;
+    cursor: pointer;
+}
+
+.details .favorite.active {
+    color: #e72929;
+}
+
+app-star-rating {
+    margin: 1.5rem 0;  /* Reduced margin for a more compact look */
+    font-size: 1.6rem;  /* Slightly reduced font size */
+    color: #e72929;
+}
+
+.details .origins {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;  /* Moderate gap between origin tags */
+    margin-bottom: 1.5rem;  /* Reduced margin for better alignment */
+}
+
+.details .origins span {
+    background-color: #e1e1e1;
+    color: #333;
+    padding: 0.4rem 1.2rem;  /* Reduced padding for compact tags */
+    border-radius: 1rem;
+    font-size: 0.95rem;  /* Slightly smaller font size */
+}
+
+/* Tags Section */
+.details .tag {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1.5rem;  /* Reduced margin for better flow */
+}
+
+.details .tag app-tags span {
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    padding: 0.4rem 1.2rem;  /* Reduced padding for compact look */
+    border-radius: 1rem;
+    font-size: 0.95rem;  /* Slightly smaller font size */
+    color: #007bff;
+    font-weight: bold;
+}
+
+/* Cook Time */
+.cook-time {
+    margin-bottom: 1.2rem;  /* Reduced margin */
+    font-size: 1.2rem;  /* Slightly smaller font size */
+}
+
+.cook-time strong {
+    font-weight: bold;
+    color: #333;
+}
+
+/* Price Section */
+.price {
+    font-size: 1.4rem;  /* Slightly larger price font */
+    color: #333;
+    margin-bottom: 1.2rem;  /* Slightly reduced margin for better spacing */
+}
+
+button {
+    border: 1px solid #ff3c00;
+    background-color: #f70c0c;
+    color: white;
+    padding: 1rem;
+    width: 100%;
+    font-size: 1.1rem;
+    cursor: pointer;
+    border-radius: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #b32400; 
+    opacity: .9;
+    cursor: pointer; /* Hover effect for button */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+
+    .details {
+        max-width: 100%;
+    }
+}
