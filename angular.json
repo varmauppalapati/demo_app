@@ -94,6 +94,14 @@
             ],
             "scripts": []
           }
+        },
+        "prerender": {
+          "builder": "@angular-devkit/build-angular:prerender",
+          "options": {
+            "browserTarget": "foodorder:build:production",
+            "serverTarget": "foodorder:server:production",
+            "routesFile": "src/angular.ssr.config.ts"
+          }
         }
       }
     }
